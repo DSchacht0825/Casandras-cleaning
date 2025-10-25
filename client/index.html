@@ -4,10 +4,29 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>client</title>
+    <title>Casandra's Cleaning - Waco's Premier Cleaning Service</title>
+    <meta name="description" content="Professional cleaning services in Waco, Texas. Residential, commercial, Airbnb turnover, and deep cleaning. No contracts required!" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Netlify Forms - Hidden form for detection -->
+    <form name="booking" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <select name="serviceType">
+        <option value="residential">Residential Cleaning</option>
+        <option value="commercial">Commercial Cleaning</option>
+        <option value="airbnb">Airbnb Turnover</option>
+        <option value="deep">Deep Cleaning</option>
+        <option value="event">Event Cleanup</option>
+        <option value="regular">Regular Housekeeping</option>
+      </select>
+      <input type="date" name="preferredDate" />
+      <input type="time" name="preferredTime" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>

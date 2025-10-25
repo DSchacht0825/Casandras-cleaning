@@ -1,0 +1,146 @@
+/* Calendar Container */
+.booking-calendar {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Override react-big-calendar styles with pink theme */
+.rbc-calendar {
+  font-family: 'Inter', sans-serif;
+}
+
+.rbc-header {
+  padding: 1rem 0.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  background: var(--pink-lighter);
+  border-bottom: 2px solid var(--pink-primary);
+}
+
+.rbc-today {
+  background-color: rgba(255, 105, 180, 0.1);
+}
+
+.rbc-off-range-bg {
+  background: #f8f8f8;
+}
+
+.rbc-button-link {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.rbc-button-link:hover {
+  color: var(--pink-primary);
+}
+
+.rbc-toolbar button {
+  color: var(--text-dark);
+  border: 2px solid var(--pink-primary);
+  background: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.rbc-toolbar button:hover,
+.rbc-toolbar button:active,
+.rbc-toolbar button.rbc-active {
+  background: var(--pink-primary);
+  color: var(--white);
+  border-color: var(--pink-primary);
+}
+
+.rbc-toolbar button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.3);
+}
+
+.rbc-event {
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.rbc-event.rbc-selected {
+  background-color: var(--pink-dark);
+}
+
+.rbc-slot-selection {
+  background-color: rgba(255, 105, 180, 0.2);
+}
+
+/* Calendar Legend */
+.calendar-legend {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--pink-lighter);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.legend-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 2px solid;
+}
+
+.legend-color.blocked {
+  background-color: #FFE4F0;
+  border-color: var(--pink-primary);
+}
+
+.legend-color.available {
+  background-color: var(--white);
+  border-color: var(--text-light);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .booking-calendar {
+    padding: 1rem;
+  }
+
+  .rbc-toolbar {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .rbc-toolbar-label {
+    order: -1;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .rbc-header {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.8rem;
+  }
+
+  .rbc-event {
+    font-size: 0.7rem;
+    padding: 2px 4px;
+  }
+
+  .calendar-legend {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaHome, FaBuilding, FaBroom, FaStar, FaCheckCircle, FaShieldAlt, FaPhone, FaEnvelope, FaMapMarkerAlt, FaMagic, FaCalendarCheck, FaBars, FaTimes } from 'react-icons/fa';
+import { FaHome, FaBuilding, FaBroom, FaStar, FaCheckCircle, FaShieldAlt, FaPhone, FaEnvelope, FaMapMarkerAlt, FaMagic, FaCalendarCheck, FaBars, FaTimes, FaFacebook, FaInstagram } from 'react-icons/fa';
+import Booking from './components/Booking';
 import './App.css';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [bookingOpen, setBookingOpen] = useState(false);
 
   // Animation variants
   const fadeInUp = {
@@ -38,7 +40,7 @@ function App() {
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button className="cta-button desktop-cta">Book Now</button>
+        <button className="cta-button desktop-cta" onClick={() => setBookingOpen(true)}>Book Now</button>
         <button className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -60,7 +62,7 @@ function App() {
               <li><a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a></li>
               <li><a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a></li>
             </ul>
-            <button className="cta-button mobile-cta" onClick={() => setMobileMenuOpen(false)}>Book Now</button>
+            <button className="cta-button mobile-cta" onClick={() => { setMobileMenuOpen(false); setBookingOpen(true); }}>Book Now</button>
           </motion.div>
         )}
       </AnimatePresence>
@@ -80,8 +82,8 @@ function App() {
           <h1>Waco's <span className="highlight">Premier</span> Cleaning Service</h1>
           <p>Experience the difference of a truly spotless home. Professional, reliable, and fully insured cleaning services tailored to your needs.</p>
           <div className="hero-buttons">
-            <button className="primary-btn">Get Free Estimate</button>
-            <button className="secondary-btn">254-651-5868</button>
+            <button className="primary-btn" onClick={() => setBookingOpen(true)}>Book Now</button>
+            <button className="secondary-btn" onClick={() => window.location.href = 'tel:254-651-5868'}>254-651-5868</button>
           </div>
         </motion.div>
       </section>
@@ -384,14 +386,14 @@ function App() {
                 <div className="contact-item-icon"><FaPhone /></div>
                 <div className="contact-item-text">
                   <h4>Call or Text</h4>
-                  <p>254-651-5868</p>
+                  <a href="tel:254-651-5868" className="contact-link">254-651-5868</a>
                 </div>
               </div>
               <div className="contact-item">
                 <div className="contact-item-icon"><FaEnvelope /></div>
                 <div className="contact-item-text">
                   <h4>Email</h4>
-                  <p>casandra@casandrascleaning.com</p>
+                  <a href="mailto:casandra@casandrascleaning.com" className="contact-link">casandra@casandrascleaning.com</a>
                 </div>
               </div>
               <div className="contact-item">
@@ -440,9 +442,24 @@ function App() {
         <div className="footer-content">
           <div className="footer-logo">Casandra's Cleaning</div>
           <p>Waco's Premier Cleaning Service</p>
-          <p>&copy; 2025 Casandra's Cleaning. All rights reserved.</p>
+          <div className="social-links">
+            <a href="https://www.facebook.com/CasandrasCleaning/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <FaFacebook />
+            </a>
+            <a href="https://www.instagram.com/casandras.cleaning/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <FaInstagram />
+            </a>
+          </div>
+          <p className="footer-copyright">&copy; 2025 Casandra's Cleaning. All rights reserved.</p>
         </div>
       </footer>
+
+      {/* Booking Modal */}
+      <AnimatePresence>
+        {bookingOpen && (
+          <Booking isOpen={bookingOpen} onClose={() => setBookingOpen(false)} />
+        )}
+      </AnimatePresence>
     </div>
   );
 }

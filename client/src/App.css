@@ -477,6 +477,20 @@
   margin: 0;
 }
 
+.contact-link {
+  font-size: 1.2rem;
+  color: var(--pink-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.contact-link:hover {
+  color: var(--pink-dark);
+  transform: translateX(5px);
+}
+
 .contact-form {
   background: var(--pink-lighter);
   padding: 3rem;
@@ -560,28 +574,37 @@
   margin-bottom: 1rem;
 }
 
+.footer-copyright {
+  margin-top: 2rem !important;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .social-links {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
-.social-icon {
-  width: 40px;
-  height: 40px;
+.social-links a {
+  width: 50px;
+  height: 50px;
   background: var(--pink-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  color: var(--white);
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.social-icon:hover {
+.social-links a:hover {
   background: var(--pink-light);
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4);
 }
 
 /* Hamburger Menu */
