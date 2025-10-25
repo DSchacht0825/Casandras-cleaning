@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://casandrascleaning.com/</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://casandrascleaning.com/images/logo.png</image:loc>
+      <image:title>Casandra's Cleaning Logo</image:title>
+      <image:caption>Professional Cleaning Services in Waco TX</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casandrascleaning.com/images/IMG_4829.jpg</image:loc>
+      <image:title>Professional House Cleaning Waco TX</image:title>
+      <image:caption>Sparkling clean home interior after professional cleaning</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casandrascleaning.com/images/IMG_4792.jpg</image:loc>
+      <image:title>Residential Cleaning Hewitt TX</image:title>
+      <image:caption>Spotless home after deep cleaning service</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casandrascleaning.com/images/image000007.jpg</image:loc>
+      <image:title>Commercial Cleaning Lorena TX</image:title>
+      <image:caption>Quality office and business cleaning service</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://casandrascleaning.com/images/casandra.jpg</image:loc>
+      <image:title>Casandra - Owner of Casandra's Cleaning</image:title>
+      <image:caption>Professional cleaning service owner in Waco Texas</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Services Section (as anchor link) -->
+  <url>
+    <loc>https://casandrascleaning.com/#services</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- About Section (as anchor link) -->
+  <url>
+    <loc>https://casandrascleaning.com/#about</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Section (as anchor link) -->
+  <url>
+    <loc>https://casandrascleaning.com/#contact</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

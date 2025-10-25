@@ -82,8 +82,8 @@ function App() {
           transition={{ duration: 0.8 }}
           variants={fadeInUp}
         >
-          <h1>Waco's <span className="highlight">Premier</span> Cleaning Service</h1>
-          <p>Experience the difference of a truly spotless home. Professional, reliable, and fully insured cleaning services tailored to your needs.</p>
+          <h1>Professional Cleaning Services in Waco, Hewitt & Lorena TX</h1>
+          <p>Experience the difference of a truly spotless home. Professional, reliable, and fully insured cleaning services for Waco, Hewitt, Lorena, Woodway, Robinson, and surrounding areas within 40 miles.</p>
           <div className="hero-buttons">
             <button className="primary-btn" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>Get Free Estimate</button>
             <button className="secondary-btn" onClick={() => window.location.href = 'tel:254-651-5868'}>254-651-5868</button>
@@ -101,8 +101,8 @@ function App() {
           transition={{ duration: 0.6 }}
           variants={fadeInUp}
         >
-          <h2>Our Services</h2>
-          <p>Comprehensive cleaning solutions for every need</p>
+          <h2>Our Cleaning Services in Waco & Surrounding Areas</h2>
+          <p>Comprehensive cleaning solutions for homes and businesses in Waco, Hewitt, Lorena, Woodway, Robinson, Bellmead, and beyond</p>
         </motion.div>
         <div className="services-grid">
           <motion.div
@@ -214,7 +214,7 @@ function App() {
             variants={scaleIn}
             whileHover={{ scale: 1.02 }}
           >
-            <img src="/images/IMG_4829.jpg" alt="Professional cleaning result" />
+            <img src="/images/IMG_4829.jpg" alt="Professional house cleaning results in Waco TX - sparkling clean home interior" />
           </motion.div>
           <motion.div
             className="gallery-item"
@@ -225,7 +225,7 @@ function App() {
             variants={scaleIn}
             whileHover={{ scale: 1.02 }}
           >
-            <img src="/images/IMG_4792.jpg" alt="Spotless home cleaning" />
+            <img src="/images/IMG_4792.jpg" alt="Residential cleaning services Hewitt TX - spotless home after deep cleaning" />
           </motion.div>
           <motion.div
             className="gallery-item"
@@ -236,7 +236,7 @@ function App() {
             variants={scaleIn}
             whileHover={{ scale: 1.02 }}
           >
-            <img src="/images/image000007.jpg" alt="Quality cleaning service" />
+            <img src="/images/image000007.jpg" alt="Commercial cleaning Lorena TX - quality office and business cleaning service" />
           </motion.div>
         </div>
       </section>
@@ -252,7 +252,7 @@ function App() {
             transition={{ duration: 0.8 }}
             variants={fadeIn}
           >
-            <img src="/images/casandra.jpg" alt="Casandra - Founder" />
+            <img src="/images/casandra.jpg" alt="Casandra, owner of Casandra's Cleaning - professional cleaning service in Waco Texas" />
           </motion.div>
           <motion.div
             className="about-text"
@@ -382,8 +382,8 @@ function App() {
             transition={{ duration: 0.6 }}
             variants={fadeInUp}
           >
-            <h2>Contact Us</h2>
-            <p>Ready to experience the best cleaning service in Waco? Call, text, or email us anytime - or fill out the form for a free estimate!</p>
+            <h2>Contact Waco's Top-Rated Cleaning Service</h2>
+            <p>Ready to experience the best cleaning service in Waco, Hewitt, Lorena, and surrounding areas? Call, text, or email us anytime - or fill out the form for a free estimate!</p>
             <div className="contact-details">
               <div className="contact-item">
                 <div className="contact-item-icon"><FaPhone /></div>
@@ -402,8 +402,8 @@ function App() {
               <div className="contact-item">
                 <div className="contact-item-icon"><FaMapMarkerAlt /></div>
                 <div className="contact-item-text">
-                  <h4>Location</h4>
-                  <p>Waco, Texas</p>
+                  <h4>Service Area</h4>
+                  <p>Waco & 40-Mile Radius (Hewitt, Lorena, Woodway, Robinson, Bellmead, McGregor, China Spring, West & More)</p>
                 </div>
               </div>
             </div>
