@@ -20,7 +20,7 @@ function App() {
   };
 
   const scaleIn = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 0, scale: 0.95 },
     visible: { opacity: 1, scale: 1 }
   };
 
@@ -109,7 +109,7 @@ function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
             variants={scaleIn}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
           >
             <div className="service-icon"><FaHome /></div>
             <h3>Residential Cleaning</h3>
@@ -123,7 +123,7 @@ function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             variants={scaleIn}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
           >
             <div className="service-icon"><FaBuilding /></div>
             <h3>Commercial Cleaning</h3>
@@ -137,7 +137,7 @@ function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
             variants={scaleIn}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
           >
             <div className="service-icon"><FaCalendarCheck /></div>
             <h3>Airbnb Turnover</h3>
@@ -151,7 +151,7 @@ function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
             variants={scaleIn}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
           >
             <div className="service-icon"><FaBroom /></div>
             <h3>Deep Cleaning</h3>
@@ -165,7 +165,7 @@ function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
             variants={scaleIn}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
           >
             <div className="service-icon"><FaMagic /></div>
             <h3>Event Cleanup</h3>
@@ -179,7 +179,7 @@ function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6 }}
             variants={scaleIn}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
           >
             <div className="service-icon"><FaStar /></div>
             <h3>Regular Housekeeping</h3>
