@@ -1,8 +1,11 @@
-import { motion } from 'framer-motion';
-import { FaHome, FaBuilding, FaBroom, FaStar, FaCheckCircle, FaShieldAlt, FaPhone, FaEnvelope, FaMapMarkerAlt, FaMagic, FaCalendarCheck } from 'react-icons/fa';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaHome, FaBuilding, FaBroom, FaStar, FaCheckCircle, FaShieldAlt, FaPhone, FaEnvelope, FaMapMarkerAlt, FaMagic, FaCalendarCheck, FaBars, FaTimes } from 'react-icons/fa';
 import './App.css';
 
 function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
@@ -35,8 +38,32 @@ function App() {
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button className="cta-button">Book Now</button>
+        <button className="cta-button desktop-cta">Book Now</button>
+        <button className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </motion.nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            className="mobile-menu"
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'tween', duration: 0.3 }}
+          >
+            <ul className="mobile-nav-links">
+              <li><a href="#home" onClick={() => setMobileMenuOpen(false)}>Home</a></li>
+              <li><a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a></li>
+              <li><a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a></li>
+              <li><a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a></li>
+            </ul>
+            <button className="cta-button mobile-cta" onClick={() => setMobileMenuOpen(false)}>Book Now</button>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Hero Section */}
       <section className="hero" id="home">
