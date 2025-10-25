@@ -732,15 +732,24 @@
     text-align: center;
   }
 
+  .contact {
+    padding: 4rem 0;
+  }
+
   .contact-content {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 0 1rem;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   .contact-info, .contact-form {
     width: 100%;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
 
   .section-title h2 {
