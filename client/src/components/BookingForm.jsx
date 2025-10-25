@@ -67,8 +67,8 @@ function BookingForm({ selectedDate, onClose }) {
         transition={{ duration: 0.5 }}
       >
         <FaCheckCircle className="success-icon" />
-        <h3>Booking Request Received!</h3>
-        <p>Thank you for your interest. We'll contact you shortly to confirm your appointment.</p>
+        <h3>Thank You!</h3>
+        <p>Someone will contact you shortly with confirmation and pricing.</p>
       </motion.div>
     );
   }
