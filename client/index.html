@@ -11,25 +11,7 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
 
-    <!-- Netlify Forms - Hidden forms for detection -->
-
-    <!-- Booking Form -->
-    <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <input type="tel" name="phone" />
-      <select name="serviceType">
-        <option value="residential">Residential Cleaning</option>
-        <option value="commercial">Commercial Cleaning</option>
-        <option value="airbnb">Airbnb Turnover</option>
-        <option value="deep">Deep Cleaning</option>
-        <option value="event">Event Cleanup</option>
-        <option value="regular">Regular Housekeeping</option>
-      </select>
-      <input type="date" name="preferredDate" />
-      <input type="time" name="preferredTime" />
-      <textarea name="message"></textarea>
-    </form>
+    <!-- Netlify Forms - Hidden form for detection -->
 
     <!-- Estimate Form -->
     <form name="estimate" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>

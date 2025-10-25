@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaHome, FaBuilding, FaBroom, FaStar, FaCheckCircle, FaShieldAlt, FaPhone, FaEnvelope, FaMapMarkerAlt, FaMagic, FaCalendarCheck, FaBars, FaTimes, FaFacebook, FaInstagram } from 'react-icons/fa';
-import Booking from './components/Booking';
 import EstimateForm from './components/EstimateForm';
 import './App.css';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [bookingOpen, setBookingOpen] = useState(false);
 
   // Animation variants
   const fadeInUp = {
@@ -41,7 +39,7 @@ function App() {
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button className="cta-button desktop-cta" onClick={() => setBookingOpen(true)}>Book Now</button>
+        <button className="cta-button desktop-cta" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>Get Estimate</button>
         <button className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -63,7 +61,7 @@ function App() {
               <li><a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a></li>
               <li><a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a></li>
             </ul>
-            <button className="cta-button mobile-cta" onClick={() => { setMobileMenuOpen(false); setBookingOpen(true); }}>Book Now</button>
+            <button className="cta-button mobile-cta" onClick={() => { setMobileMenuOpen(false); document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); }}>Get Estimate</button>
           </motion.div>
         )}
       </AnimatePresence>
@@ -435,13 +433,6 @@ function App() {
           <p className="footer-copyright">&copy; 2025 Casandra's Cleaning. All rights reserved.</p>
         </div>
       </footer>
-
-      {/* Booking Modal */}
-      <AnimatePresence>
-        {bookingOpen && (
-          <Booking isOpen={bookingOpen} onClose={() => setBookingOpen(false)} />
-        )}
-      </AnimatePresence>
     </div>
   );
 }
