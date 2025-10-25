@@ -83,7 +83,7 @@ function App() {
           <h1>Waco's <span className="highlight">Premier</span> Cleaning Service</h1>
           <p>Experience the difference of a truly spotless home. Professional, reliable, and fully insured cleaning services tailored to your needs.</p>
           <div className="hero-buttons">
-            <button className="primary-btn" onClick={() => setBookingOpen(true)}>Book Now</button>
+            <button className="primary-btn" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>Get Free Estimate</button>
             <button className="secondary-btn" onClick={() => window.location.href = 'tel:254-651-5868'}>254-651-5868</button>
           </div>
         </motion.div>
