@@ -11,7 +11,7 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
 
-    <!-- Netlify Forms - Hidden form for detection -->
+    <!-- Netlify Forms - Hidden forms for detection -->
 
     <!-- Estimate Form -->
     <form name="estimate" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
@@ -35,6 +35,36 @@
         <option value="move-in-out">Move In/Move Out</option>
       </select>
       <textarea name="specialRequests"></textarea>
+    </form>
+
+    <!-- Employment Form -->
+    <form name="employment" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <select name="position">
+        <option value="cleaner">Residential Cleaner</option>
+        <option value="commercial-cleaner">Commercial Cleaner</option>
+        <option value="team-lead">Team Lead</option>
+        <option value="other">Other</option>
+      </select>
+      <input type="text" name="experience" />
+      <select name="availability">
+        <option value="full-time">Full-Time</option>
+        <option value="part-time">Part-Time</option>
+        <option value="flexible">Flexible</option>
+      </select>
+      <select name="hasTransportation">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <select name="hasReferences">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <input type="date" name="startDate" />
+      <textarea name="coverLetter"></textarea>
     </form>
   </body>
 </html>

@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaHome, FaBuilding, FaBroom, FaStar, FaCheckCircle, FaShieldAlt, FaPhone, FaEnvelope, FaMapMarkerAlt, FaMagic, FaCalendarCheck, FaBars, FaTimes, FaFacebook, FaInstagram } from 'react-icons/fa';
 import EstimateForm from './components/EstimateForm';
+import EmploymentForm from './components/EmploymentForm';
 import './App.css';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [employmentOpen, setEmploymentOpen] = useState(false);
 
   // Animation variants
   const fadeInUp = {
@@ -38,6 +40,7 @@ function App() {
           <li><a href="#services">Services</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#" onClick={(e) => { e.preventDefault(); setEmploymentOpen(true); }}>Careers</a></li>
         </ul>
         <button className="cta-button desktop-cta" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>Get Estimate</button>
         <button className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -60,6 +63,7 @@ function App() {
               <li><a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a></li>
               <li><a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a></li>
               <li><a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a></li>
+              <li><a href="#" onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); setEmploymentOpen(true); }}>Careers</a></li>
             </ul>
             <button className="cta-button mobile-cta" onClick={() => { setMobileMenuOpen(false); document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); }}>Get Estimate</button>
           </motion.div>
@@ -433,6 +437,13 @@ function App() {
           <p className="footer-copyright">&copy; 2025 Casandra's Cleaning. All rights reserved.</p>
         </div>
       </footer>
+
+      {/* Employment Modal */}
+      <AnimatePresence>
+        {employmentOpen && (
+          <EmploymentForm isOpen={employmentOpen} onClose={() => setEmploymentOpen(false)} />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
