@@ -165,20 +165,23 @@ The blocked dates are stored in: `/client/public/blocked-dates.json`
 
 ### Business Hours
 Current hours are set in `/client/src/components/BookingCalendar.jsx`:
-- **Start**: 8:00 AM
-- **End**: 6:00 PM
+- **Days**: Monday - Friday only
+- **Hours**: 9:00 AM - 5:00 PM
+- **Timezone**: Central Time (America/Chicago)
 
-To change:
+**Weekends are automatically blocked** - customers cannot book on Saturday or Sunday.
+
+To change business hours:
 1. Open `BookingCalendar.jsx`
 2. Find these lines:
 ```javascript
-min={new Date(2025, 0, 1, 8, 0, 0)} // 8 AM
-max={new Date(2025, 0, 1, 18, 0, 0)} // 6 PM
+min={new Date(2025, 0, 1, 9, 0, 0)} // 9 AM
+max={new Date(2025, 0, 1, 17, 0, 0)} // 5 PM
 ```
 3. Change the hours (24-hour format):
-   - `8` = 8 AM
-   - `18` = 6 PM
-   - Example: For 7 AM to 7 PM, use `7` and `19`
+   - `9` = 9 AM
+   - `17` = 5 PM
+   - Example: For 8 AM to 6 PM, use `8` and `18`
 
 ---
 

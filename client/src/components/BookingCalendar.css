@@ -77,6 +77,18 @@
   background-color: rgba(255, 105, 180, 0.2);
 }
 
+/* Weekend Days Styling */
+.weekend-day {
+  background-color: #f8f8f8 !important;
+  color: #ccc !important;
+  cursor: not-allowed !important;
+}
+
+.rbc-day-bg.weekend-day {
+  background-color: #f8f8f8 !important;
+  opacity: 0.5;
+}
+
 /* Calendar Legend */
 .calendar-legend {
   display: flex;
