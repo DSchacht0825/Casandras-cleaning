@@ -12,7 +12,7 @@
     <script type="module" src="/src/main.jsx"></script>
 
     <!-- Netlify Forms - Hidden form for detection -->
-    <form name="booking" netlify netlify-honeypot="bot-field" hidden>
+    <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
       <input type="email" name="email" />
       <input type="tel" name="phone" />
