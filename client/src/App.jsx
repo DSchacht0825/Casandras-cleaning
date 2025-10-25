@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaHome, FaBuilding, FaBroom, FaStar, FaCheckCircle, FaShieldAlt, FaPhone, FaEnvelope, FaMapMarkerAlt, FaMagic, FaCalendarCheck, FaBars, FaTimes, FaFacebook, FaInstagram } from 'react-icons/fa';
 import Booking from './components/Booking';
+import EstimateForm from './components/EstimateForm';
 import './App.css';
 
 function App() {
@@ -379,8 +380,8 @@ function App() {
             transition={{ duration: 0.6 }}
             variants={fadeInUp}
           >
-            <h2>Get in Touch</h2>
-            <p>Ready to experience the best cleaning service in Waco? Contact us today for a free estimate!</p>
+            <h2>Contact Us</h2>
+            <p>Ready to experience the best cleaning service in Waco? Call, text, or email us anytime - or fill out the form for a free estimate!</p>
             <div className="contact-details">
               <div className="contact-item">
                 <div className="contact-item-icon"><FaPhone /></div>
@@ -407,32 +408,13 @@ function App() {
           </motion.div>
 
           <motion.div
-            className="contact-form"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             variants={fadeInUp}
           >
-            <form>
-              <div className="form-group">
-                <label>Name</label>
-                <input type="text" placeholder="Your name" />
-              </div>
-              <div className="form-group">
-                <label>Email</label>
-                <input type="email" placeholder="your@email.com" />
-              </div>
-              <div className="form-group">
-                <label>Phone</label>
-                <input type="tel" placeholder="(123) 456-7890" />
-              </div>
-              <div className="form-group">
-                <label>Message</label>
-                <textarea placeholder="Tell us about your cleaning needs..."></textarea>
-              </div>
-              <button type="submit" className="submit-btn">Send Message</button>
-            </form>
+            <EstimateForm />
           </motion.div>
         </div>
       </section>

@@ -11,7 +11,9 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
 
-    <!-- Netlify Forms - Hidden form for detection -->
+    <!-- Netlify Forms - Hidden forms for detection -->
+
+    <!-- Booking Form -->
     <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
       <input type="email" name="email" />
@@ -27,6 +29,30 @@
       <input type="date" name="preferredDate" />
       <input type="time" name="preferredTime" />
       <textarea name="message"></textarea>
+    </form>
+
+    <!-- Estimate Form -->
+    <form name="estimate" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <select name="propertyType">
+        <option value="residential">Residential</option>
+        <option value="commercial">Commercial</option>
+        <option value="airbnb">Airbnb/Vacation Rental</option>
+        <option value="office">Office</option>
+      </select>
+      <input type="text" name="propertySize" />
+      <input type="number" name="bedrooms" />
+      <input type="number" name="bathrooms" />
+      <select name="frequency">
+        <option value="one-time">One-Time Deep Clean</option>
+        <option value="weekly">Weekly</option>
+        <option value="bi-weekly">Bi-Weekly</option>
+        <option value="monthly">Monthly</option>
+        <option value="move-in-out">Move In/Move Out</option>
+      </select>
+      <textarea name="specialRequests"></textarea>
     </form>
   </body>
 </html>
