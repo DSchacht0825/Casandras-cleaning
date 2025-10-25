@@ -87,11 +87,12 @@ function BookingCalendar({ blockedDates, onDateSelect, selectedDate }) {
         selectable
         onSelectSlot={handleSelectSlot}
         views={['month', 'week', 'day']}
-        defaultView="month"
+        defaultView="week"
         step={60}
         timeslots={1}
         min={new Date(2025, 0, 1, 9, 0, 0)} // 9 AM
         max={new Date(2025, 0, 1, 17, 0, 0)} // 5 PM
+        scrollToTime={new Date(2025, 0, 1, 9, 0, 0)} // Start view at 9 AM
       />
       <div className="calendar-legend">
         <div className="legend-item">
