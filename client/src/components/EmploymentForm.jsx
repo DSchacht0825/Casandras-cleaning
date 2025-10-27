@@ -115,7 +115,7 @@ function EmploymentForm({ isOpen, onClose }) {
             </div>
 
             <div className="employment-content">
-              <form onSubmit={handleSubmit} name="employment" method="POST" data-netlify="true">
+              <form onSubmit={handleSubmit} name="employment">
                 <input type="hidden" name="form-name" value="employment" />
 
                 <div className="form-row">

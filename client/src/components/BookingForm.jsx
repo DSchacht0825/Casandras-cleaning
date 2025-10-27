@@ -88,7 +88,7 @@ function BookingForm({ selectedDate, onClose }) {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} name="booking" method="POST" data-netlify="true">
+      <form onSubmit={handleSubmit} name="booking">
         <input type="hidden" name="form-name" value="booking" />
 
         <div className="form-group">

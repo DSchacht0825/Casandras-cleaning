@@ -95,7 +95,7 @@ function EstimateForm() {
       <h3>Get a Free Estimate</h3>
       <p className="form-subtitle">Tell us about your cleaning needs and we'll provide a customized quote</p>
 
-      <form onSubmit={handleSubmit} name="estimate" method="POST" data-netlify="true">
+      <form onSubmit={handleSubmit} name="estimate">
         <input type="hidden" name="form-name" value="estimate" />
 
         <div className="form-row">
