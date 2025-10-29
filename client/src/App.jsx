@@ -38,7 +38,6 @@ function App() {
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#" onClick={(e) => { e.preventDefault(); setEmploymentOpen(true); }}>Careers</a></li>
         </ul>
@@ -61,7 +60,6 @@ function App() {
             <ul className="mobile-nav-links">
               <li><a href="#home" onClick={() => setMobileMenuOpen(false)}>Home</a></li>
               <li><a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a></li>
-              <li><a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a></li>
               <li><a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); setEmploymentOpen(true); }}>Careers</a></li>
             </ul>
@@ -239,68 +237,6 @@ function App() {
             <img src="/images/image000007.jpg" alt="Commercial cleaning Lorena TX - quality office and business cleaning service" />
           </motion.div>
         </div>
-      </section>
-
-      {/* About Section */}
-      <section className="about" id="about">
-        <div className="about-content">
-          <motion.div
-            className="about-image"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            variants={fadeIn}
-          >
-            <img src="/images/casandra.jpg" alt="Casandra, owner of Casandra's Cleaning - professional cleaning service in Waco Texas" />
-          </motion.div>
-          <motion.div
-            className="about-text"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            variants={fadeInUp}
-          >
-            <h2>About Casandra</h2>
-            <p>Born and raised in Waco Texas. Mom of three amazing boys. I am also a special needs mom. My youngest son was born with spina bifida and hydrocephalus. I know what it feels like to be tired and walk into a clean and tidy house, office, or salon. This feeling now opens doors to a creative mindset, puts you at ease and creates opportunities to spend your time on important things such as family, business ideas or relaxation.</p>
-            <p>So when you choose Casandra's Cleaning it's not just a cleaning service, but an investment of your time. Time is something we will never get back.</p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Our Story Section */}
-      <section className="our-story">
-        <motion.div
-          className="section-title"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          variants={fadeInUp}
-        >
-          <h2>Our Story</h2>
-        </motion.div>
-        <motion.div
-          className="story-content"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          variants={fadeInUp}
-        >
-          <p>Years ago, I watched my mother build her own cleaning business from the ground up. She did it with grit, grace, and a quiet strength that inspired everyone around her — especially me. As a young mom, I saw firsthand how her hard work provided for our family and created a sense of pride in what she built. I knew then that I wanted to follow in her footsteps.</p>
-
-          <p>That's why I started Casandra's Cleaning — not just to make a living, but to carry forward a legacy.</p>
-
-          <p>As a Latina woman and a mother of three, I've faced more than my share of barriers. There were moments of doubt, days where it felt like the odds were stacked against me — but I refused to let anything stop me. With every challenge, I became stronger. With every setback, more determined.</p>
-
-          <p>What started as a small hustle has now grown into something I'm incredibly proud of: a trusted cleaning service built on integrity, excellence, and heart.</p>
-
-          <p>To me, cleaning isn't just about sparkling floors or tidy spaces. It's about creating peace of mind — giving people the gift of time so they can focus on what matters most. It's about showing my boys that no matter where you come from, you can build something beautiful with faith, work ethic, and a whole lot of heart.</p>
-
-          <p className="story-closing">This business is more than a job. It's my story, my passion, and my promise to every client: that when you invite Casandra's Cleaning into your space, you're not just hiring a service — you're supporting a dream.</p>
-        </motion.div>
       </section>
 
       {/* Features Section */}
