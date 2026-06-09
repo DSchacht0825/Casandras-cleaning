@@ -437,10 +437,10 @@ document.head.insertAdjacentHTML('beforeend', additionalStyles);
  */
 console.log(`
 🧽 Welcome to Casandra's Cleaning
-Waco's Premier House Cleaning Service
+Arlington's Premier House Cleaning Service
 
 For inquiries:
-📞 (254) 555-CLEAN
+📞 254-651-5868
 📧 info@casandrascleaning.com
 🌐 casandrascleaning.com
 `);

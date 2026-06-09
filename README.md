@@ -1,6 +1,6 @@
 # Casandra's Cleaning - Premium House Cleaning Services
 
-A sophisticated, elegant website for Casandra's Cleaning, a premium house cleaning service in Waco, Texas.
+A sophisticated, elegant website for Casandra's Cleaning, a premium house cleaning service in Arlington, Texas.
 
 ## 🏆 Features
 
@@ -12,7 +12,7 @@ A sophisticated, elegant website for Casandra's Cleaning, a premium house cleani
 - **Clean typography** - Poppins and Playfair Display fonts
 
 ### SEO Optimized
-- **Local SEO focused** - Targeting Waco, Hewitt, Woodway, Central Texas
+- **Local SEO focused** - Targeting Arlington, Grand Prairie, Mansfield, DFW Metroplex
 - **Rich Schema markup** - Enhanced search visibility
 - **Competitive positioning** - "5-star rated" and premium positioning
 - **Meta optimization** - All pages optimized for search engines
@@ -99,7 +99,7 @@ casandras-cleaning/
 
 - **Local business Schema** markup
 - **Service-specific** meta descriptions
-- **Geographic targeting** for Waco area
+- **Geographic targeting** for Arlington area
 - **Competitive keywords** integration
 - **Site structure** optimized for search
 
@@ -119,4 +119,4 @@ casandras-cleaning/
 - **Professional animations**
 - **Elegant notifications** system
 
-Perfect for a premium cleaning service that wants to establish authority and attract high-quality clients in the Waco, Texas market.
+Perfect for a premium cleaning service that wants to establish authority and attract high-quality clients in the Arlington, Texas market.

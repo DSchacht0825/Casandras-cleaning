@@ -34,7 +34,7 @@ function App() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <img src="/images/logo.png" alt="Casandra's Cleaning Logo" className="logo" />
+        <img src="/images/newlogo.jpeg" alt="Casandra's Cleaning Logo" className="logo" />
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#services">Services</a></li>
@@ -80,8 +80,8 @@ function App() {
           transition={{ duration: 0.8 }}
           variants={fadeInUp}
         >
-          <h1>Professional Cleaning Services in Waco, Hewitt & Lorena TX</h1>
-          <p>Experience the difference of a truly spotless home. Professional, reliable, and fully insured cleaning services for Waco, Hewitt, Lorena, Woodway, Robinson, and surrounding areas within 40 miles.</p>
+          <h1>Professional Cleaning Services in Arlington & DFW</h1>
+          <p>Experience the difference of a truly spotless home. Professional, reliable, and fully insured cleaning services for Arlington, Grand Prairie, Mansfield, Fort Worth, Waco, and surrounding areas.</p>
           <div className="hero-buttons">
             <button className="primary-btn" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>Get Free Estimate</button>
             <button className="secondary-btn" onClick={() => window.location.href = 'tel:254-651-5868'}>254-651-5868</button>
@@ -99,8 +99,8 @@ function App() {
           transition={{ duration: 0.6 }}
           variants={fadeInUp}
         >
-          <h2>Our Cleaning Services in Waco & Surrounding Areas</h2>
-          <p>Comprehensive cleaning solutions for homes and businesses in Waco, Hewitt, Lorena, Woodway, Robinson, Bellmead, and beyond</p>
+          <h2>Our Cleaning Services in Arlington & Surrounding Areas</h2>
+          <p>Comprehensive cleaning solutions for homes and businesses in Arlington, Grand Prairie, Mansfield, Fort Worth, Waco, and beyond</p>
         </motion.div>
         <div className="services-grid">
           <motion.div
@@ -212,7 +212,7 @@ function App() {
             variants={scaleIn}
             whileHover={{ scale: 1.02 }}
           >
-            <img src="/images/IMG_4829.jpg" alt="Professional house cleaning results in Waco TX - sparkling clean home interior" />
+            <img src="/images/IMG_4829.jpg" alt="Professional house cleaning results in Arlington TX - sparkling clean home interior" />
           </motion.div>
           <motion.div
             className="gallery-item"
@@ -223,7 +223,7 @@ function App() {
             variants={scaleIn}
             whileHover={{ scale: 1.02 }}
           >
-            <img src="/images/IMG_4792.jpg" alt="Residential cleaning services Hewitt TX - spotless home after deep cleaning" />
+            <img src="/images/IMG_4792.jpg" alt="Residential cleaning services Grand Prairie TX - spotless home after deep cleaning" />
           </motion.div>
           <motion.div
             className="gallery-item"
@@ -234,7 +234,7 @@ function App() {
             variants={scaleIn}
             whileHover={{ scale: 1.02 }}
           >
-            <img src="/images/image000007.jpg" alt="Commercial cleaning Lorena TX - quality office and business cleaning service" />
+            <img src="/images/image000007.jpg" alt="Commercial cleaning Mansfield TX - quality office and business cleaning service" />
           </motion.div>
         </div>
       </section>
@@ -318,8 +318,8 @@ function App() {
             transition={{ duration: 0.6 }}
             variants={fadeInUp}
           >
-            <h2>Contact Waco's Top-Rated Cleaning Service</h2>
-            <p>Ready to experience the best cleaning service in Waco, Hewitt, Lorena, and surrounding areas? Call, text, or email us anytime - or fill out the form for a free estimate!</p>
+            <h2>Contact Arlington's Top-Rated Cleaning Service</h2>
+            <p>Ready to experience the best cleaning service in Arlington, DFW, Waco, and surrounding areas? Call, text, or email us anytime - or fill out the form for a free estimate!</p>
             <div className="contact-details">
               <div className="contact-item">
                 <div className="contact-item-icon"><FaPhone /></div>
@@ -339,7 +339,7 @@ function App() {
                 <div className="contact-item-icon"><FaMapMarkerAlt /></div>
                 <div className="contact-item-text">
                   <h4>Service Area</h4>
-                  <p>Waco & 40-Mile Radius (Hewitt, Lorena, Woodway, Robinson, Bellmead, McGregor, China Spring, West & More)</p>
+                  <p>Arlington, DFW Metroplex, Waco & Surrounding Areas</p>
                 </div>
               </div>
             </div>
@@ -361,7 +361,7 @@ function App() {
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-logo">Casandra's Cleaning</div>
-          <p>Waco's Premier Cleaning Service</p>
+          <p>Arlington's Premier Cleaning Service</p>
           <div className="social-links">
             <a href="https://www.facebook.com/CasandrasCleaning/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebook />
