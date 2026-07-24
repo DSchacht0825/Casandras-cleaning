@@ -84,7 +84,7 @@ function App() {
           <p>Experience the difference of a truly spotless home. Professional, reliable, and fully insured cleaning services for Arlington, Grand Prairie, Mansfield, Fort Worth, Waco, and surrounding areas.</p>
           <div className="hero-buttons">
             <button className="primary-btn" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>Get Free Estimate</button>
-            <button className="secondary-btn" onClick={() => window.location.href = 'tel:254-651-5868'}>254-651-5868</button>
+            <button className="secondary-btn" onClick={() => window.location.href = 'tel:469-915-0592'}>469-915-0592</button>
           </div>
         </motion.div>
       </section>
@@ -325,7 +325,7 @@ function App() {
                 <div className="contact-item-icon"><FaPhone /></div>
                 <div className="contact-item-text">
                   <h4>Call or Text</h4>
-                  <a href="tel:254-651-5868" className="contact-link">254-651-5868</a>
+                  <a href="tel:469-915-0592" className="contact-link">469-915-0592</a>
                 </div>
               </div>
               <div className="contact-item">

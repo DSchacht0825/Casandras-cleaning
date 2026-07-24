@@ -64,11 +64,11 @@ function EmploymentForm({ isOpen, onClose }) {
           });
         }, 4000);
       } else {
-        alert('There was an issue submitting your application. Please try again or call us at 254-651-5868.');
+        alert('There was an issue submitting your application. Please try again or call us at 469-915-0592.');
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      alert('There was an issue submitting your application. Please try again or call us at 254-651-5868.');
+      alert('There was an issue submitting your application. Please try again or call us at 469-915-0592.');
     } finally {
       setIsSubmitting(false);
     }
