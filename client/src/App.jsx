@@ -371,6 +371,7 @@ function App() {
             </a>
           </div>
           <p className="footer-copyright">&copy; 2025 Casandra's Cleaning. All rights reserved.</p>
+          <p className="footer-credit" style={{marginTop: '0.5rem', fontSize: '0.85rem', opacity: 0.8}}>Website by <a href="https://causory.com" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline'}}>Causory</a></p>
         </div>
       </footer>
 
