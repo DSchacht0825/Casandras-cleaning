@@ -1,0 +1,6 @@
+{
+  "name": "casandras-cleaning-marketing",
+  "private": true,
+  "scripts": { "render": "node render.js" },
+  "dependencies": { "pdf-lib": "^1.17.1", "puppeteer-core": "^23.11.1", "qrcode": "^1.5.4" }
+}

@@ -1,0 +1,131 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* Door hanger: 4.25 x 11 in trim → 4.5 x 11.25 in with bleed.
+     Top ~2in is background only: the printer die-cuts the hanger hole/slit there. */
+  @page { size: 4.5in 11.25in; margin: 0; }
+  .page { width: 4.5in; height: 11.25in; }
+  .pad { padding-left: 0.42in; padding-right: 0.42in; }
+
+  .cap {
+    position: relative; height: 2.45in; background: var(--grad); overflow: hidden;
+  }
+  .cap .dot { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.14); }
+  .cap .d1 { width: 2.2in; height: 2.2in; left: -0.8in; top: -0.9in; }
+  .cap .d2 { width: 1.4in; height: 1.4in; right: -0.5in; top: 0.9in; }
+  .logo-badge {
+    position: absolute; left: 50%; top: 1.85in; transform: translateX(-50%);
+    width: 1.18in; height: 1.18in; z-index: 3;
+  }
+
+  /* ---------- FRONT ---------- */
+  .f .body { padding-top: 0.66in; text-align: center; }
+  .f .eyebrow { font-size: 8.6pt; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--pink-dark); }
+  .f h1 { font-size: 24pt; line-height: 1.1; margin-top: 4pt; }
+  .f h1 em { font-style: italic; color: var(--pink-dark); }
+
+  .note { margin-top: 13pt; background: var(--blush); border: 1pt dashed var(--pink-light); border-radius: 10pt; padding: 9pt 12pt; text-align: left; font-size: 9.6pt; line-height: 1.95; }
+  .box { display: inline-block; width: 9pt; height: 9pt; border: 1.2pt solid var(--pink-dark); border-radius: 2pt; margin-right: 6pt; vertical-align: -1pt; }
+  .line { display: inline-block; border-bottom: 1pt solid var(--gray); width: 1.6in; height: 9pt; }
+
+  .f .lounge { height: 1.75in; border-radius: 10pt; margin-top: 13pt;
+    background: url('../assets/lounge.jpg') center 62% / cover no-repeat; }
+  .f .svcs { text-align: left; margin-top: 13pt; font-size: 10.2pt; line-height: 1.35; }
+  .f .svcs li + li { margin-top: 6pt; }
+
+  .cta {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 2.55in;
+    background: var(--grad); color: #fff; text-align: center;
+    padding-top: 0.22in;
+  }
+  .cta .qr { width: 0.98in; height: 0.98in; margin: 0 auto 4pt; }
+  .cta .scan { font-size: 8pt; font-weight: 600; }
+  .cta .label { font-size: 8.4pt; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; margin-top: 7pt; }
+  .cta .phone { font-family: 'Playfair Display', serif; font-size: 24pt; font-weight: 700; line-height: 1.15; }
+  .cta .web { font-size: 9pt; font-weight: 500; }
+
+  /* ---------- BACK ---------- */
+  .b .body { padding-top: 0.62in; }
+  .b h2 { font-size: 21pt; line-height: 1.15; text-align: center; }
+  .b .photo {
+    height: 2.05in; border-radius: 10pt; margin-top: 12pt;
+    background: url('../assets/dining.jpg') center 60% / cover no-repeat;
+  }
+  .b .why { margin-top: 14pt; font-size: 9.8pt; line-height: 1.4; }
+  .b .why li + li { margin-top: 8pt; }
+  .b .why b { color: var(--ink); }
+  .b .why span { color: var(--gray); }
+  .b .areas { margin-top: 16pt; padding-top: 12pt; border-top: 1pt solid var(--pink-lighter); text-align: center; }
+  .b .areas h3 { font-size: 13pt; margin-bottom: 4pt; }
+  .b .areas p { font-size: 9.2pt; line-height: 1.6; color: var(--gray); }
+  .b .cta { height: 1.6in; padding-top: 0.2in; }
+  .b .cta .phone { font-size: 24pt; }
+  .b .cta .contact { font-size: 8pt; line-height: 1.5; margin-top: 3pt; opacity: 0.95; }
+</style></head>
+<body>
+
+<!-- FRONT -->
+<section class="page f">
+  <div class="cap"><div class="dot d1"></div><div class="dot d2"></div></div>
+  <div class="logo-badge"><img src="../assets/logo.jpeg" alt=""></div>
+
+  <div class="pad body">
+    <div class="eyebrow">Sorry we missed you!</div>
+    <h1>Professional Cleaning <em>in Your Neighborhood</em></h1>
+
+    <div class="note">
+      <div><span class="box"></span>We just cleaned a home on your street</div>
+      <div><span class="box"></span>We stopped by to say hello</div>
+      <div>Left by: <span class="line"></span></div>
+    </div>
+
+    <div class="lounge"></div>
+
+    <ul class="svcs check">
+      <li><b>Residential &amp; deep cleaning</b></li>
+      <li><b>Weekly, bi-weekly or monthly</b></li>
+      <li><b>Commercial &amp; Airbnb turnovers</b></li>
+      <li><b>Fully insured · No contracts</b></li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <div class="qr"><img src="../assets/qr-doorhanger.svg" alt=""></div>
+    <div class="scan">Scan for a free estimate</div>
+    <div class="label">Call or text</div>
+    <div class="phone">469-915-0592</div>
+    <div class="web">casandrascleaning.com</div>
+  </div>
+</section>
+
+<!-- BACK -->
+<section class="page b">
+  <div class="cap"><div class="dot d1"></div><div class="dot d2"></div></div>
+  <div class="logo-badge"><img src="../assets/logo.jpeg" alt=""></div>
+
+  <div class="pad body">
+    <h2>Come Home to a <span class="pink">Spotless</span> Space</h2>
+    <div class="photo"></div>
+
+    <ul class="why check">
+      <li><b>100% Satisfaction.</b> <span>We stand behind every clean.</span></li>
+      <li><b>Fully Insured.</b> <span>Peace of mind while we work.</span></li>
+      <li><b>No Contracts.</b> <span>Flexible service, no commitment.</span></li>
+      <li><b>Reliable.</b> <span>On time, every time.</span></li>
+    </ul>
+
+    <div class="areas">
+      <h3>Proudly Serving</h3>
+      <p>Arlington · Grand Prairie · Mansfield · Fort Worth<br>Irving · Euless · Bedford · Hurst · Kennedale</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="label">Free estimates · Call or text</div>
+    <div class="phone">469-915-0592</div>
+    <div class="contact">casandrascleaning.com<br>casandra@casandrascleaning.com</div>
+  </div>
+</section>
+
+</body></html>
