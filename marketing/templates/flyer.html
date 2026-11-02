@@ -57,14 +57,14 @@
   .b .eyebrow { font-size: 9.5pt; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--pink-dark); }
   .b h2 { font-size: 27pt; line-height: 1.12; margin-top: 4pt; }
 
-  .meet { display: grid; grid-template-columns: 1.65in 1fr; gap: 20pt; align-items: center; margin-top: 0.3in; }
-  .meet .portrait {
-    width: 1.65in; height: 1.65in; border-radius: 50%;
-    background: url('../assets/casandra.jpg') center 22% / cover no-repeat;
-    border: 3pt solid #fff; box-shadow: 0 0 0 2pt var(--pink-light);
+  .meet {
+    margin-top: 0.32in; text-align: center;
+    background: var(--blush); border: 1pt solid var(--pink-lighter); border-radius: 14pt;
+    padding: 18pt 30pt;
   }
-  .meet h3 { font-size: 17pt; margin-bottom: 5pt; }
-  .meet p { font-size: 10.4pt; line-height: 1.55; color: var(--gray); }
+  .meet h3 { font-size: 18pt; margin-bottom: 7pt; }
+  .meet h3 em { font-style: italic; color: var(--pink-dark); }
+  .meet p { font-size: 11pt; line-height: 1.6; color: var(--gray); }
 
   .why { display: grid; grid-template-columns: 1fr 1fr; gap: 12pt 22pt; margin-top: 0.3in; }
   .why li { font-size: 10pt; line-height: 1.45; }
@@ -140,11 +140,8 @@
 
   <div class="pad">
     <div class="meet">
-      <div class="portrait"></div>
-      <div>
-        <h3>Meet Casandra</h3>
-        <p>Casandra's Cleaning is a local Arlington cleaning company. Casandra and her team treat every home like their own, with a careful, detail-focused clean you can count on visit after visit.</p>
-      </div>
+      <h3>Local, Caring &amp; <em>Detail-Focused</em></h3>
+      <p>Casandra's Cleaning is a local Arlington cleaning company. Casandra and her team treat every home like their own, with a careful, detail-focused clean you can count on every time.</p>
     </div>
 
     <ul class="why check">
