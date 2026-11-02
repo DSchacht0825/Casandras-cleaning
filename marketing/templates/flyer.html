@@ -9,34 +9,34 @@
 
   /* ---------- FRONT ---------- */
   .banner {
-    position: relative; height: 4.15in;
-    background: url('../assets/dining.jpg') center 58% / cover no-repeat;
+    position: relative; height: 3.35in; overflow: hidden;
+    background: linear-gradient(180deg, var(--pink-lighter) 0%, var(--blush) 70%, #fff 100%);
   }
-  .banner::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(255,228,240,0) 45%, rgba(255,255,255,0.92) 92%, #fff 100%);
-  }
+  .banner .dot { position: absolute; border-radius: 50%; }
+  .banner .d1 { width: 3in; height: 3in; left: -1.1in; top: -1.3in; background: rgba(255,105,180,0.12); }
+  .banner .d2 { width: 2in; height: 2in; right: -0.6in; top: 0.9in; background: rgba(255,182,217,0.25); }
+  .banner .d3 { width: 0.7in; height: 0.7in; right: 1.6in; top: 0.35in; background: rgba(255,105,180,0.10); }
   .banner .ribbon {
-    position: absolute; top: 0.48in; left: 0.6in; z-index: 2;
-    background: rgba(255,255,255,0.92); color: var(--pink-dark);
+    position: absolute; top: 0.45in; left: 50%; transform: translateX(-50%); z-index: 2;
+    background: #fff; color: var(--pink-dark);
     font-weight: 600; font-size: 9.5pt; letter-spacing: 0.16em; text-transform: uppercase;
-    padding: 6pt 13pt; border-radius: 30pt;
+    padding: 6pt 13pt; border-radius: 30pt; white-space: nowrap;
   }
   .f .logo-badge {
-    position: absolute; left: 50%; top: 3.15in; transform: translateX(-50%);
-    width: 1.4in; height: 1.4in; z-index: 3;
+    position: absolute; left: 50%; top: 0.95in; transform: translateX(-50%);
+    width: 2.05in; height: 2.05in; z-index: 3;
   }
-  .f .hero { text-align: center; margin-top: 0.62in; }
-  .f h1 { font-size: 33pt; line-height: 1.08; }
+  .f .hero { text-align: center; margin-top: 0.22in; }
+  .f h1 { font-size: 37pt; line-height: 1.08; }
   .f h1 em { font-style: italic; color: var(--pink-dark); }
-  .f .sub { font-size: 11.5pt; line-height: 1.5; margin-top: 8pt; }
+  .f .sub { font-size: 12.5pt; line-height: 1.55; margin-top: 10pt; }
 
-  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10pt; margin-top: 22pt; }
-  .svc { background: var(--blush); border: 1pt solid var(--pink-lighter); border-radius: 11pt; padding: 12pt 12pt; }
-  .svc h3 { font-size: 12pt; margin-bottom: 3pt; }
-  .svc p { font-size: 8.6pt; line-height: 1.42; color: var(--gray); }
+  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12pt; margin-top: 22pt; }
+  .svc { background: var(--blush); border: 1pt solid var(--pink-lighter); border-radius: 12pt; padding: 13pt 14pt; }
+  .svc h3 { font-size: 13pt; margin-bottom: 4pt; white-space: nowrap; }
+  .svc p { font-size: 9.4pt; line-height: 1.45; color: var(--gray); }
 
-  .trust { display: flex; justify-content: center; gap: 15pt; margin-top: 22pt; font-size: 10pt; font-weight: 600; }
+  .trust { display: flex; justify-content: center; gap: 15pt; margin-top: 20pt; font-size: 10.6pt; font-weight: 600; }
   .trust .check li { display: inline-block; }
   .trust ul { display: flex; gap: 16pt; }
 
@@ -90,12 +90,12 @@
 
 <!-- FRONT -->
 <section class="page f">
-  <div class="banner"><div class="ribbon">Arlington &amp; DFW</div></div>
+  <div class="banner"><div class="dot d1"></div><div class="dot d2"></div><div class="dot d3"></div><div class="ribbon">Arlington &amp; DFW</div></div>
   <div class="logo-badge"><img src="../assets/logo.jpeg" alt=""></div>
 
   <div class="pad">
     <div class="hero">
-      <h1>A Spotless Home, <em>Without the Stress</em></h1>
+      <h1>A Spotless Home,<br><em>Without the Stress</em></h1>
       <p class="sub muted">Professional, reliable and fully insured cleaning for homes and businesses<br>in Arlington, Grand Prairie, Mansfield, Fort Worth and surrounding areas.</p>
     </div>
 
