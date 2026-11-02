@@ -72,7 +72,7 @@ export const CITIES = [
   },
 ];
 
-export const cityPath = (city) => `/house-cleaning-${city.slug}-tx`;
+export const cityPath = (city) => `/house-cleaning-${city.slug}-tx/`;
 
 export function cityFromPath(pathname) {
   const clean = pathname.replace(/\/+$/, '');
