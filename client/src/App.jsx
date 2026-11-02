@@ -3,9 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaHome, FaBuilding, FaBroom, FaStar, FaCheckCircle, FaShieldAlt, FaPhone, FaEnvelope, FaMapMarkerAlt, FaMagic, FaCalendarCheck, FaBars, FaTimes, FaFacebook, FaInstagram } from 'react-icons/fa';
 import EstimateForm from './components/EstimateForm';
 import EmploymentForm from './components/EmploymentForm';
+import Reviews from './components/Reviews';
+import ServiceAreas from './components/ServiceAreas';
+import { PHONE } from './siteData';
 import './App.css';
 
-function App() {
+function App({ city = null }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [employmentOpen, setEmploymentOpen] = useState(false);
 
@@ -34,10 +37,12 @@ function App() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <img src="/images/newlogo.jpeg" alt="Casandra's Cleaning Logo" className="logo" />
+        <a href="/" aria-label="Casandra's Cleaning home"><img src="/images/newlogo.jpeg" alt="Casandra's Cleaning Logo" className="logo" /></a>
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#areas">Areas</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#" onClick={(e) => { e.preventDefault(); setEmploymentOpen(true); }}>Careers</a></li>
         </ul>
@@ -60,6 +65,8 @@ function App() {
             <ul className="mobile-nav-links">
               <li><a href="#home" onClick={() => setMobileMenuOpen(false)}>Home</a></li>
               <li><a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a></li>
+              <li><a href="#reviews" onClick={() => setMobileMenuOpen(false)}>Reviews</a></li>
+              <li><a href="#areas" onClick={() => setMobileMenuOpen(false)}>Areas We Serve</a></li>
               <li><a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); setEmploymentOpen(true); }}>Careers</a></li>
             </ul>
@@ -80,11 +87,20 @@ function App() {
           transition={{ duration: 0.8 }}
           variants={fadeInUp}
         >
-          <h1>Professional Cleaning Services in Arlington & DFW</h1>
-          <p>Experience the difference of a truly spotless home. Professional, reliable, and fully insured cleaning services for Arlington, Grand Prairie, Mansfield, Fort Worth, Waco, and surrounding areas.</p>
+          {city ? (
+            <>
+              <h1>House Cleaning in {city.name}, TX</h1>
+              <p>{city.intro}</p>
+            </>
+          ) : (
+            <>
+              <h1>Professional Cleaning Services in Arlington & DFW</h1>
+              <p>Experience the difference of a truly spotless home. Professional, reliable, and fully insured cleaning services for Arlington, Grand Prairie, Mansfield, Fort Worth, Waco, and surrounding areas.</p>
+            </>
+          )}
           <div className="hero-buttons">
             <button className="primary-btn" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>Get Free Estimate</button>
-            <button className="secondary-btn" onClick={() => window.location.href = 'tel:469-915-0592'}>469-915-0592</button>
+            <button className="secondary-btn" onClick={() => window.location.href = `tel:${PHONE}`}>{PHONE}</button>
           </div>
         </motion.div>
       </section>
@@ -99,8 +115,10 @@ function App() {
           transition={{ duration: 0.6 }}
           variants={fadeInUp}
         >
-          <h2>Our Cleaning Services in Arlington & Surrounding Areas</h2>
-          <p>Comprehensive cleaning solutions for homes and businesses in Arlington, Grand Prairie, Mansfield, Fort Worth, Waco, and beyond</p>
+          <h2>Our Cleaning Services in {city ? `${city.name}, TX` : 'Arlington & Surrounding Areas'}</h2>
+          <p>{city
+            ? `Comprehensive cleaning solutions for homes and businesses in ${city.name} and nearby ${city.nearby.join(', ')}`
+            : 'Comprehensive cleaning solutions for homes and businesses in Arlington, Grand Prairie, Mansfield, Fort Worth, Waco, and beyond'}</p>
         </motion.div>
         <div className="services-grid">
           <motion.div
@@ -239,6 +257,8 @@ function App() {
         </div>
       </section>
 
+      <Reviews cityName={city?.name} />
+
       {/* Features Section */}
       <section className="features">
         <motion.div
@@ -307,6 +327,8 @@ function App() {
         </div>
       </section>
 
+      <ServiceAreas currentSlug={city?.slug} />
+
       {/* Contact Section */}
       <section className="contact" id="contact">
         <div className="contact-content">
@@ -318,7 +340,7 @@ function App() {
             transition={{ duration: 0.6 }}
             variants={fadeInUp}
           >
-            <h2>Contact Arlington's Top-Rated Cleaning Service</h2>
+            <h2>{city ? `Book Your ${city.name} House Cleaning` : "Contact Arlington's Top-Rated Cleaning Service"}</h2>
             <p>Ready to experience the best cleaning service in Arlington, DFW, Waco, and surrounding areas? Call, text, or email us anytime - or fill out the form for a free estimate!</p>
             <div className="contact-details">
               <div className="contact-item">

@@ -1,0 +1,61 @@
+.service-areas {
+  padding: 6rem 5%;
+  background: var(--white);
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.area-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.1rem 1.5rem;
+  border-radius: 50px;
+  background: var(--pink-lighter);
+  color: var(--text-dark);
+  font-weight: 500;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.area-chip svg {
+  color: var(--pink-primary);
+}
+
+.area-chip:hover {
+  border-color: var(--pink-light);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.15);
+}
+
+.area-chip.active {
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+  color: var(--white);
+}
+
+.area-chip.active svg {
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .service-areas {
+    padding: 4rem 5%;
+  }
+
+  .areas-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .area-chip {
+    padding: 0.9rem 0.75rem;
+    font-size: 0.95rem;
+  }
+}
