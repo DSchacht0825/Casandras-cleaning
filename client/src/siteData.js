@@ -76,5 +76,5 @@ export const cityPath = (city) => `/house-cleaning-${city.slug}-tx/`;
 
 export function cityFromPath(pathname) {
   const clean = pathname.replace(/\/+$/, '');
-  return CITIES.find((c) => cityPath(c) === clean) || null;
+  return CITIES.find((c) => cityPath(c).replace(/\/+$/, '') === clean) || null;
 }
